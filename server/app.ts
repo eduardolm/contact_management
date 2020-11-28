@@ -23,24 +23,26 @@ class App {
     }
 
     routes() {
-        this.app.route('/')
-            .get((req, res) => res.status(200)
-                .json({result: "Hello World!"}));
 
         this.app.route('/api/contacts')
-            .get((req, res) => this.controller.select(req, res));
+            .get((req, res) =>
+                this.controller.select(req, res));
 
         this.app.route('/api/contacts/:id')
-            .get((req, res) => this.controller.selectOne(req, res));
+            .get((req, res) =>
+                this.controller.selectOne(req, res));
 
         this.app.route('/api/contacts/')
-            .post((req, res) => this.controller.create(req, res));
+            .post((req, res) =>
+                this.controller.create(req, res));
 
         this.app.route('/api/contacts/:id')
-            .put((req, res) => this.controller.update(req, res));
+            .put((req, res) =>
+                this.controller.update(req, res));
 
         this.app.route('/api/contacts/:id')
-            .delete((req, res) => this.controller.delete(req, res));
+            .delete((req, res) =>
+                this.controller.delete(req, res));
     }
 }
 

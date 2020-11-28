@@ -1,11 +1,11 @@
 import * as mongoose from 'mongoose';
 
 const ContactSchema = new mongoose.Schema({
-    nome: {
+    name: {
         type: String,
         required: true
     },
-    apelido: {
+    nickname: {
         type: String,
         required: true,
         unique: true

@@ -6,7 +6,7 @@ class Controller {
     }
 
     getContacts() {
-        return model.find({}); // Returns all records
+        return model.find({});
     }
 
     select(req, res){

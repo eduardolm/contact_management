@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 
 class DataBase {
 
-    private dbUrl = 'mongodb://127.0.0.1/node_crush';
+    private dbUrl = 'mongodb://127.0.0.1/contacts';
     private dbConnection;
 
     constructor() {
@@ -15,8 +15,8 @@ class DataBase {
 
     logger(uri) {
         this.dbConnection = mongoose.connection;
-        this.dbConnection.on('connected', () => console.log('Mongoose está conectado!'));
-        this.dbConnection.on('error', (error) => console.error.bind(console, 'Erro na conexão: ', error));
+        this.dbConnection.on('connected', () => console.log('Mongoose successfully connected!'));
+        this.dbConnection.on('error', (error) => console.error.bind(console, 'Conection Error: ', error));
     }
 }
 
