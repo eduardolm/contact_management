@@ -6,6 +6,8 @@ Build a simple REST API to manage contacts.
  + Mongoose
  + Express
  + MongoDB
+ + Typescript
+ + Github
 ## Description
 This API provides simple CRUD functionality to manage contacts using MondoDB.
 ## Endpoints and HTTP Methods
